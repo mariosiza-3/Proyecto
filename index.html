@@ -105,15 +105,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 												<input type="password" name="password" class="input-field" placeholder="Contraseña" required>
 												<button type="submit" class="btn">Iniciar Sesión</button>
 												
-												<?php
-											
-												IF(ISSET($_SESSION['ERROR'])){
-													$ERROR = $_SESSION["ERROR"];
-													echo "<span> $ERROR </SPAN>";
-												}
-												?>
 											</form>
-											<!-- Enlaces a otros modales -->
 											<a href="#forgotPasswordModal" data-toggle="modal" data-dismiss="modal" class="link">¿Olvidaste tu contraseña?</a>
 										</div>
 									</div>
@@ -133,7 +125,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
             </div>
             <section>
                 <div class="modal-body">
-                    <img src="images/imagen1.jpg" alt=" " class="img-responsive" />
+                    <img src="imagen1.jpg" alt=" " class="img-responsive" />
                     <div class="form-container12">
                         <h2>Recupera tu contraseña</h2>
                         <form action="index.php" method="POST">
@@ -143,37 +135,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							<button type="submit" class="btn" name="Recuperar">Recuperar contraseña</button>
 							<div>
-
-
-                        </form>
-						<?php
-if (isset($_POST['Recuperar'])) {
-    // Recogemos los datos del formulario
-    $USUARIO = $_POST['caja1'];
-	$CONTRASENA = $_POST['caja2'];
- 	$CONFIRMACION = $_POST['caja3'];
-	// Validación: asegurarse de que los campos no estén vacíos
-	if (empty($USUARIO) || empty($CONTRASENA) || empty($CONFIRMACION)) {
-		echo '<script>alert("Todos los campos deben estar llenos.");</script>';
-    } else {
-		// Validación: asegurarse de que la contraseña y la confirmación coincidan
-		if ($CONTRASENA!= $CONFIRMACION) {
-            echo '<script>alert("Las contraseñas no coinciden.");</script>';
-        } else {
-            // Realizamos la actualización de la contraseña en la base de datos
-            $ACTUALIZAR = "UPDATE estudiante SET Contrasena = '$CONTRASENA' WHERE CorreoElectronico = '$USUARIO'";
-			
-            // Ejecutamos la consulta
-			if (mysqli_query($conexion, $ACTUALIZAR)) {
-                echo '<script>alert("Contraseña actualizada.");</script>';
-                echo '<script>window.location.href="index.php";</script>';
-            } else {
-                echo "Error al actualizar: ". mysqli_error($conexion);
-            }
-        }
-    }
-}
-?>
+			</form>
                         <a href="#myModal" data-toggle="modal" data-dismiss="modal" class="link">Regresar a Iniciar Sesión</a>
                     </div>
                 </div>
@@ -194,7 +156,7 @@ if (isset($_POST['Recuperar'])) {
 					<p>La Institución Educativa Rural del Sur tiene como misión contribuir a la formación de seres humanos integrales, autónomos, críticos, competentes para promover su propio desarrollo, fundamentados en principios éticos del respeto, la tolerancia y la responsabilidad individual y colectiva, para mejorar su calidad de vida, fortaleciendo su sentido democrático, ecológico, y social, a través de la implementación de una modalidad técnica que permita trascender en la transformación de su contexto.</p>
 				</div>
 				<div class="col-md-6 agileits_about_grid_right">
-					<img src="images/imagen3.jpg" alt=" " class="img-responsive" />
+					<img src="imagen3.jpg" alt=" " class="img-responsive" />
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -205,7 +167,7 @@ if (isset($_POST['Recuperar'])) {
 	<div class="banner-bottom">
 		<div class="container">
 			<div class="col-md-4 wthree_banner_bottom_left">
-				<img src="images/1.jpg" alt=" " class="img-responsive" />
+				<img src="1.jpg" alt=" " class="img-responsive" />
 			</div>
 			<div class="col-md-8 wthree_banner_bottom_right">
 				<h3>Visión</h3>
@@ -231,7 +193,7 @@ if (isset($_POST['Recuperar'])) {
 				- Formato de matrícula</p>
 		</div>
 		<div class="col-md-4 banner-bottom-image-text-right">
-			<img src="images/imagenlol.jpg" alt=" " class="img-responsive" />
+			<img src="imagenlol.jpg" alt=" " class="img-responsive" />
 		</div>
 		<div class="clearfix"> </div>
 	</div>
@@ -244,7 +206,7 @@ if (isset($_POST['Recuperar'])) {
 			<div class="agile_team_grids">
 				<div class="col-md-3 agile_team_grid">
 					<div class="view view-sixth">
-						<img src="images/imagen4.jpg" alt=" " class="img-responsive" />
+						<img src="imagen4.jpg" alt=" " class="img-responsive" />
 						<div class="mask">
 							<h5>Presentaciones Finales</h5>
 							<p>Presentacion cultural de los estudiantes, esta siendo la última</p>
@@ -260,7 +222,7 @@ if (isset($_POST['Recuperar'])) {
 				</div>
 				<div class="col-md-3 agile_team_grid">
 					<div class="view view-sixth">
-						<img src="images/imagen5.jpg" alt=" " class="img-responsive" />
+						<img src="imagen5.jpg" alt=" " class="img-responsive" />
 						<div class="mask">
 							<h5>Charla Semana de la Páz</h5>
 							<p>Nuestros estudiantes disfrutaron de una charla sobre la Páz, invitación de la Alcaldia </p>
@@ -276,7 +238,7 @@ if (isset($_POST['Recuperar'])) {
 				</div>
 				<div class="col-md-3 agile_team_grid">
 					<div class="view view-sixth">
-						<img src="images/imagen6.jpg" alt=" " class="img-responsive" />
+						<img src="imagen6.jpg" alt=" " class="img-responsive" />
 						<div class="mask">
 							<h5>Dia del boyacensimo</h5>
 							<p>Mostramos lo orgullosos que estna nuestros estudiantes de sus raices con una presentación gastronomica de Boyáca</p>
@@ -292,7 +254,7 @@ if (isset($_POST['Recuperar'])) {
 				</div>
 				<div class="col-md-3 agile_team_grid">
 					<div class="view view-sixth">
-						<img src="images/imagen7.jpg" alt=" " class="img-responsive" />
+						<img src="imagen7.jpg" alt=" " class="img-responsive" />
 						<div class="mask">
 							<h5>Planeta</h5>
 							<p>Quisimos junto a nustros estudiantes ayudar al planeta con la siempra de arbóles.</p>
@@ -318,9 +280,9 @@ if (isset($_POST['Recuperar'])) {
 		<div class="w3agile_gallery_grids">
 			<div class="col-md-3 w3agile_gallery_grid">
 				<div class="w3agile_gallery_image">
-					<a class="sb" href="images/imagen9.jpg" title="Integracion con otras instituciones donde nuestra intutución participo gracias a la colaboracion de nuestros docentes y estudiantes">
+					<a class="sb" href="imagen9.jpg" title="Integracion con otras instituciones donde nuestra intutución participo gracias a la colaboracion de nuestros docentes y estudiantes">
 						<figure>
-							<img src="images/imagen9.jpg" alt="" class="img-responsive" />
+							<img src="imagen9.jpg" alt="" class="img-responsive" />
 							<figcaption>
 								<h4>Participación Carros Electricós</h4>
 								<p>
@@ -333,7 +295,7 @@ if (isset($_POST['Recuperar'])) {
 			</div>
 			<div class="col-md-3 w3agile_gallery_grid">
 				<div class="w3agile_gallery_image">
-					<a class="sb"  href="images/imagen10.jpg" title="Celebramos el cumpleaños de nuestra instutucion educativa, con una integracion entre estduiantes y docentes donde de esto salieron muchas presentaciones, felicidad y orgullo por la IERS">
+					<a class="sb"  href="imagen10.jpg" title="Celebramos el cumpleaños de nuestra instutucion educativa, con una integracion entre estduiantes y docentes donde de esto salieron muchas presentaciones, felicidad y orgullo por la IERS">
 						<figure>
 							<img src="images/imagen10.jpg" alt="" class="img-responsive" />
 							<figcaption>
@@ -350,7 +312,7 @@ if (isset($_POST['Recuperar'])) {
 				<div class="w3agile_gallery_image">
 					<a class="sb" title="Los padres de nuestros estudiantes realizaron una integracion debido a su satisfaccion de que casi culminan con el periodo academico sus hijos" href="images/imagen11.jpg">
 						<figure>
-							<img src="images/imagen11.jpg" alt="" class="img-responsive" />
+							<img src="imagen11.jpg" alt="" class="img-responsive" />
 							<figcaption>
 								<h4>Compartir Padres de familia </h4>
 								<p>
@@ -365,7 +327,7 @@ if (isset($_POST['Recuperar'])) {
 				<div class="w3agile_gallery_image">
 					<a class="sb" title="Nuestros estdiantes organizaron una serie de presentaciones de diferentes tipos donde nos mostraban danzas, coplas, poemas, dialectos de nuestras regiones" href="images/imagen12.jpg">
 						<figure>
-							<img src="images/imagen12.jpg" alt="" class="img-responsive" />
+							<img src="imagen12.jpg" alt="" class="img-responsive" />
 							<figcaption>
 								<h4>Presentaciones</h4>
 								<p>
@@ -380,7 +342,7 @@ if (isset($_POST['Recuperar'])) {
 				<div class="w3agile_gallery_image">
 					<a class="sb" title="Realizamos celebracion eucaristica en honor al cumpleaños del colegio agradeciendo a un ser superior por darnos el privilegio de seguir enseñandoles a nuestros estudiantes" href="images/imagen13.jpg">
 						<figure>
-							<img src="images/imagen13.jpg" alt="" class="img-responsive" />
+							<img src="imagen13.jpg" alt="" class="img-responsive" />
 							<figcaption>
 								<h4>Celebracion Ecuristica</h4>
 								<p>
@@ -395,7 +357,7 @@ if (isset($_POST['Recuperar'])) {
 				<div class="w3agile_gallery_image">
 					<a class="sb" title="La alcaldia de la ciudad de Tunja realizo una serie de charlas sobre la paz donde fue invitada nuestra institucion, creando un entorno de integracion con experiencias, opiniones y demas." href="images/imagen14+.jpg">
 						<figure>
-							<img src="images/imagen14+.jpg" alt="" class="img-responsive" />
+							<img src="imagen14+.jpg" alt="" class="img-responsive" />
 							<figcaption>
 								<h4>integración con otras instituciones</h4>
 								<p>
@@ -410,7 +372,7 @@ if (isset($_POST['Recuperar'])) {
 				<div class="w3agile_gallery_image">
 					<a class="sb" title="Charla a nivel municipal en temas de sociedad y paz con nuestros estudiantes de Once B" href="images/imagen15.jpg">
 						<figure>
-							<img src="images/imagen15.jpg" alt="" class="img-responsive" />
+							<img src="imagen15.jpg" alt="" class="img-responsive" />
 							<figcaption>
 								<h4>Charla a estudiantes de undecimo</h4>
 								<p>
@@ -425,7 +387,7 @@ if (isset($_POST['Recuperar'])) {
 				<div class="w3agile_gallery_image">
 					<a class="sb" title="El banco bogota trajo su carro movible a nuestras instalaciones para poder compartir sus conocimientos mediante tecnologia y economia" href="images/imagen16.jpg">
 						<figure>
-							<img src="images/imagen16.jpg" alt="" class="img-responsive" />
+							<img src="imagen16.jpg" alt="" class="img-responsive" />
 							<figcaption>
 								<h4> Visita Banco de Bogotá</h4>
 								<p>
@@ -438,7 +400,7 @@ if (isset($_POST['Recuperar'])) {
 			</div>
 		   <div class="clearfix"> </div>
 		</div>
-		<script type="text/javascript" src="js/smoothbox.jquery2.js"></script>
+		<script type="text/javascript" src="smoothbox.jquery2.js"></script>
 	</div>
 <!-- //gallery -->
  <!-- team-bottom -->
@@ -477,7 +439,7 @@ if (isset($_POST['Recuperar'])) {
 			</form>
 		</div>
 		<!-- start-date-piker -->
-			<script src="js/jquery-ui.js"></script>
+			<script src="jquery-ui.js"></script>
 			  <script>
 					$(function() {
 						$( "#datepicker" ).datepicker();
@@ -530,28 +492,6 @@ if (isset($_POST['Recuperar'])) {
 			
 					<button type="submit" class="siza" name="ENVIAR">Enviar</button>
 				</form>
-				<?php
-    if (isset($_POST['ENVIAR'])) {
-        // Validación de campos seleccionados
-        $NOMBRE = $_POST['Nombre'];
-		$TIDENT= $_POST['tipo-identificacion'];
-		$NIDENT= $_POST['numero-identificacion'];
-		$CORREO= $_POST['CorreoElectronico'];
-		$TELEFONO= $_POST['Telefono'];
-		$TIPOSOLICITUD= $_POST['Tiposolicitud'];
-		$MOTIVO= $_POST['Motivo'];	
-		$FECHACREACION= $_POST['FechaCreacion'];
-	
-
-
-            $SQL = "INSERT INTO formulariopqr (Nombre, TipoIdentificacion, NumeroIdentificacion, CorreoElectronico, Telefono, TipoSolicitud, Motivo, Fecha) VALUES ('$NOMBRE', '$TIDENT','$NIDENT', '$CORREO', '$TELEFONO', '$TIPOSOLICITUD', '$MOTIVO', '$FECHACREACION')";
-            $RESULT = mysqli_query($conexion, $SQL) or die(mysqli_error($conexion));
-
-            echo '<script>alert("Tu PQR a sido enviada correctamente");</script>';
-            echo '<script>window.location.href = "Index.php";</script>';
-        }
-	
-    ?>
 	</div>
 					</div>
 				</div>
@@ -571,21 +511,6 @@ if (isset($_POST['Recuperar'])) {
 
 				<textarea name="Mensaje" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Mensaje...</textarea>
 				<input type="submit" value="Enviar" name="ENVIAR">
-				<?php
-    if (isset($_POST['ENVIAR'])) {
-        // Validación de campos seleccionados
-        $NOMBRE = $_POST['Name'];
-        $APELLIDO = $_POST['Email'];
-        $TELEFONO = $_POST['Telefono'];
-        $CORREO = $_POST['Mensaje'];
-
-            $SQL = "INSERT INTO contactanos (Nombre, Correo, Telefono, Mensaje) VALUES ('$NOMBRE', '$APELLIDO', '$TELEFONO', '$CORREO')";
-            $RESULT = mysqli_query($conexion, $SQL) or die(mysqli_error($conexion));
-
-            echo '<script>alert("Reserva con nosotros Confirmada");</script>';
-            echo '<script>window.location.href = "Index.php";</script>';
-        }
-    ?>
 			</form>
 		</div>
 		<div class="col-md-6 w3agile_contact_right">
@@ -613,7 +538,7 @@ if (isset($_POST['Recuperar'])) {
 	</div>
 <!-- //contact -->
 <!-- for bootstrap working -->
-<script src="js/bootstrap.js"></script>
+<script src="jbootstrap.js"></script>
 <!-- //for bootstrap working -->
 <!-- here stars scrolling icon -->
 	<script type="text/javascript">
