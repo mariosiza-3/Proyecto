@@ -4,10 +4,6 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-<?php
-SESSION_START();
-REQUIRE_ONCE('paginas/CONEXION/conexion.php');
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,19 +18,19 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
-<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="style.css" rel='stylesheet' type='text/css' />
 <link rel="stylesheet" href="css/jquery-ui.css" type='text/css' />
 <link rel="stylesheet" href="css/smoothbox.css" type='text/css' >
 <!-- //Custom Theme files -->
 <!-- js -->
-<script src="js/jquery.min.js"></script>
+<script src="jquery.min.js"></script>
 <!-- //js -->
 <!--webfont-->
 <link href='//fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <!-- start-smoth-scrolling -->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="move-top.js"></script>
+<script type="text/javascript" src="easing.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event){		
@@ -56,7 +52,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<h2><a href="index.php">Rural del Sur</a></h2>
 					</div>
 					<div class="navigation-right">
-						<span class="menu"><img src="images/menu.png" alt=" " /></span>
+						<span class="menu"><img src="menu.png" alt=" " /></span>
 						<nav class="link-effect-3" id="link-effect-3">
 							<ul class="nav1 nav nav-wil">
 								<li class="active"><a data-hover="Home" href="index.html">Inicio</a></li>
