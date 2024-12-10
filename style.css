@@ -286,7 +286,7 @@ button.close {
 }
 .banner-bottom-image-text-left h4:before{
 	content:'';
-	background:url(../images/img-sp.png) no-repeat 0px 0px;
+	background:url(img-sp.png) no-repeat 0px 0px;
 	display:block;
 /*-- w3layouts --*/
 	width:32px;
@@ -569,7 +569,7 @@ p.nostrud{
 	z-index: 10;
 }
 .icon-twitter:before{
-	background: url(../images/img-sp.png) no-repeat 10px -41px;
+	background: url(img-sp.png) no-repeat 10px -41px;
     display: block;
     content: '';
     width: 36px;
@@ -579,7 +579,7 @@ a.icon-button.twitter:hover .icon-twitter:before{
 	background-position:10px -75px;
 }
 .icon-facebook:before{
-	background:url(../images/img-sp.png) no-repeat -36px -41px;
+	background:url(img-sp.png) no-repeat -36px -41px;
     display: block;
     content: '';
     width: 36px;
@@ -589,7 +589,7 @@ a.icon-button.facebook:hover .icon-facebook:before{
 	background-position:-36px -75px;
 }
 .icon-google-plus:before{
-	background:url(../images/img-sp.png) no-repeat -76px -42px;
+	background:url(img-sp.png) no-repeat -76px -42px;
     display: block;
     content: '';
     width: 36px;
@@ -602,7 +602,7 @@ a.icon-button.google-plus:hover .icon-google-plus:before{
 /*-- //team --*/
 /*-- team-bottom --*/
 .team-bottom{
-	background:url(../images/imagen8.jpg) no-repeat 0px 0px;
+	background:url(imagen8.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -792,7 +792,7 @@ select#country,select#country1{
     position: absolute;
     bottom:-100%;
     left: 27%;
-    background: url(../images/1.png) no-repeat 0px 0px #fff;
+    background: url(1.png) no-repeat 0px 0px #fff;
     display: block;
     height: 38px;
     width: 27px;
@@ -980,7 +980,7 @@ div#myTabContent {
 	height: 32px;
 	border: none;
 	text-indent: 100%;
-	background: url(../images/arrow.png) no-repeat 0px 0px;
+	background: url(arrow.png) no-repeat 0px 0px;
 }
 #toTopHover {
 	width: 32px;
