@@ -4,18 +4,6 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-<?php
-SESSION_START();
-
-// Verifica si la variable de sesión contiene los datos necesarios
-if (!isset($_SESSION['IdEstudiante'])) {
-    echo '<script>alert("Debe iniciar sesión para acceder a esta página.");</script>';
-    echo '<script>window.location.href = "index.php";</script>';
-    exit;
-}
-REQUIRE_ONCE('paginas/CONEXION/conexion.php');
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,11 +16,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
-<link href="css/style.css" rel='stylesheet' type='text/css' />
-<link rel="stylesheet" href="css/jquery-ui.css" type='text/css' />
-<link rel="stylesheet" href="css/smoothbox.css" type='text/css' >
+<link href="style.css" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="jquery-ui.css" type='text/css' />
+<link rel="stylesheet" href="smoothbox.css" type='text/css' >
 <!-- //Custom Theme files -->
 <!-- js -->
 <script src="js/jquery.min.js"></script>
